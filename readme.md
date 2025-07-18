@@ -1,6 +1,6 @@
 Funcionalidades Principais:
 
-1 - Precisão do tempo para a cidade selecionada
+1 - Previsão do tempo para a cidade selecionada ✅
 
 2 - Dados históricos sobre o clima de um local
 
@@ -18,5 +18,5 @@ Funcionalidades Principais:
 
 9 - Alerta sobre condições climáticas severas
 
-10 - Selecionar o idioma
+10 - Selecionar o idioma ✅
 
