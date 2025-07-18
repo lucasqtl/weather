@@ -32,17 +32,17 @@ def previsao():
     weather_data = get_weather_data(city, 7, language)
 
     count = 0
-    print(f'Previsão para os próximos 7 dias em {city}: ')
+    print(f'{translations[language]['text_city']}: {city}')
     for day_data in weather_data['forecast']['forecastday']:
         print('\n' + '='*30)
         count+=1
         print(f'Dia {count}:')
-        print(f'Dia: {day_data['date']}')
-        print(f'Temperatura máxima: {day_data['day']['maxtemp_c']}')
-        print(f'Temperatura mínima: {day_data['day']['mintemp_c']}')
-        print(f'Condições: {day_data['day']['condition']['text']}')
-        print(f'Nascer do Sol: {day_data['astro']['sunrise']}')
-        print(f'Pôr do sol: {day_data['astro']['sunset']}')
+        print(f'{translations[language]['day']}: {day_data['date']}')
+        print(f'{translations[language]['max_temp']}: {day_data['day']['maxtemp_c']}')
+        print(f'{translations[language]['min_temp']}: {day_data['day']['mintemp_c']}')
+        print(f'{translations[language]['conditions']}: {day_data['day']['condition']['text']}')
+        print(f'{translations[language]['sunrise']}: {day_data['astro']['sunrise']}')
+        print(f'{translations[language]['sunset']}: {day_data['astro']['sunset']}')
         print('='*30)
 
 if __name__ == '__main__':

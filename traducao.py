@@ -14,7 +14,14 @@ translations = {
         'select_language': '10 - Selecionar Idioma:',
         'close_menu': '0 - Fechar Menu:',
         'choose_option': 'Qual opção deseja? ',
-        'enter_city': 'Digite a sua cidade: '
+        'enter_city': 'Digite a sua cidade: ',
+        'text_city': 'Previsão para os próximos 7 dias em',
+        'day': 'Dia',
+        'max_temp': 'Temperatura máxima',
+        'min_temp': 'Temperatura mínima',
+        'conditions': 'Condições',
+        'sunrise': 'Nascer do Sol',
+        'sunset': 'Pôr do Sol',
     },
     'en': {
         'select_feature': 'Select a feature:',
@@ -30,7 +37,14 @@ translations = {
         'select_language': '10 - Select Language:',
         'close_menu': '0 - Close Menu:',
         'choose_option': 'Which option do you want? ',
-        'enter_city': 'Enter your city: '
+        'enter_city': 'Enter your city: ',
+        'text_city': 'Forecast for the next 7 days in',
+        'day': 'Day',
+        'max_temp': 'Maximum Temperature',
+        'min_temp': 'Minimum Temperature',
+        'conditions': 'Conditions',
+        'sunrise': 'Sunrise',
+        'sunset': 'Sunset',
     },
     'es': {
         'select_feature': 'Seleccione una funcionalidad:',
@@ -46,7 +60,14 @@ translations = {
         'select_language': '10 - Seleccionar Idioma:',
         'close_menu': '0 - Cerrar Menú:',
         'choose_option': '¿Qué opción desea? ',
-        'enter_city': 'Ingrese su ciudad: '
+        'enter_city': 'Ingrese su ciudad: ',
+        'text_city': 'Pronóstico para los próximos 7 días en',
+        'day': 'Día',
+        'max_temp': 'Temperatura máxima',
+        'min_temp': 'Temperatura mínima',
+        'conditions': 'Condiciones',
+        'sunrise': 'Amanecer',
+        'sunset': 'Atardecer'
     }
 }
 
