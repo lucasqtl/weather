@@ -66,8 +66,9 @@ def tempo():
     print(f'Umidade: {weather_data['current']['humidity']}%')
     print(f'Velocidade do vento: {weather_data['current']['wind_kph']}km/h')
     print(f'Precipitação: {weather_data['current']['precip_mm']}mm')
-    print('='*30)
 
+    print('='*30)
+    
     option = input('Digite "c" para consultar outra cidade ou "m" para voltar ao menu: ')
     if option == 'c':
         tempo()
@@ -76,6 +77,27 @@ def tempo():
     else:
         print('Entrada inválida, retornando ao menu')
         return
+
+def alertas():
+    city = input('Digite a cidade que você quer consultar se há alertas: ')
+    weather_data = get_weather_data(city, 7, language)
+                                    
+    if 'alerts' in weather_data:
+        if weather_data['alerts']['alert']:
+            print(f'Temos alertas climáticos nos próximos 7 dias em : {city.title()}')
+            for alert in weather_data['alerts']['alert']: 
+                print('\n' + '='*30)
+                print(f"Título: {alert.get('headline', 'N/A')}")
+                print(f"Descrição: {alert.get('desc', 'N/A')}")
+                print(f"Severidade: {alert.get('severity', 'N/A')}")
+                print(f"Urgência: {alert.get('urgency', 'N/A')}")
+                print(f"Áreas afetadas: {alert.get('areas', 'N/A')}")
+                print('='*30)
+        else:
+            print('\n' + '='*30)
+            print('Não existem alertas climáticos para a sua cidade nos próximos 7 dias.')
+            print('='*30)
+
 
 
 if __name__ == '__main__':
@@ -107,21 +129,23 @@ if __name__ == '__main__':
             elif op == 3:
                 city = input(translations[language]['enter_city'])
                 placeholders.dados(city)
+
             elif op == 4:
-                placeholders.locate()
-            elif op == 5:
                 city = input(translations[language]['enter_city'])
                 placeholders.mapa(city)
-            elif op == 6:
+
+            elif op == 5:
                 placeholders.widget()
-            elif op == 7:
+
+            elif op == 6:
                 placeholders.report()
-            elif op == 8:
+                
+            elif op == 7:
                 placeholders.analise()
+            elif op == 8:
+                alertas()
+
             elif op == 9:
-                city = input(translations[language]['enter_city'])
-                placeholders.alert(city)
-            elif op == 10:
                 print('\n' + '='*30)
                 print('Português: pt')
                 print('Inglês: en')
