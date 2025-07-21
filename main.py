@@ -14,7 +14,7 @@ def get_weather_data(query, forecast_days=1, lang="en"):
         "key": API_KEY,
         "q": query,
         "days": forecast_days, 
-        "alerts": "no", # Pode ser 'yes' se quiser alertas
+        "alerts": "yes",
         "lang": lang
     }
 
@@ -32,18 +32,51 @@ def previsao():
     weather_data = get_weather_data(city, 7, language)
 
     count = 0
-    print(f'{translations[language]['text_city']}: {city}')
+    print(f'{translations[language]['text_city']}: {city.title()}')
     for day_data in weather_data['forecast']['forecastday']:
         print('\n' + '='*30)
         count+=1
         print(f'Dia {count}:')
         print(f'{translations[language]['day']}: {day_data['date']}')
-        print(f'{translations[language]['max_temp']}: {day_data['day']['maxtemp_c']}')
-        print(f'{translations[language]['min_temp']}: {day_data['day']['mintemp_c']}')
+        print(f'{translations[language]['max_temp']}: {day_data['day']['maxtemp_c']}°')
+        print(f'{translations[language]['min_temp']}: {day_data['day']['mintemp_c']}°')
         print(f'{translations[language]['conditions']}: {day_data['day']['condition']['text']}')
         print(f'{translations[language]['sunrise']}: {day_data['astro']['sunrise']}')
         print(f'{translations[language]['sunset']}: {day_data['astro']['sunset']}')
         print('='*30)
+
+    option = input('Digite "c" para consultar outra cidade ou "m" para voltar ao menu: ')
+    if option == 'c':
+        tempo()
+    elif option == 'm':
+        return
+    else:
+        print('Entrada inválida, retornando ao menu')
+        return
+
+
+def tempo():
+    city = input(translations[language]['enter_city'])
+    weather_data = get_weather_data(city, 1, language)
+
+    print('\n' + '='*30)
+    print(f'Como está o tempo em {city.title()}')
+    print(f'Temperatura: {weather_data['current']['temp_c']}°')
+    print(f'Condição: {weather_data['current']['condition']['text']}')
+    print(f'Umidade: {weather_data['current']['humidity']}%')
+    print(f'Velocidade do vento: {weather_data['current']['wind_kph']}km/h')
+    print(f'Precipitação: {weather_data['current']['precip_mm']}mm')
+    print('='*30)
+
+    option = input('Digite "c" para consultar outra cidade ou "m" para voltar ao menu: ')
+    if option == 'c':
+        tempo()
+    elif option == 'm':
+        return
+    else:
+        print('Entrada inválida, retornando ao menu')
+        return
+
 
 if __name__ == '__main__':
     print('\n' + '='*30)
@@ -69,8 +102,8 @@ if __name__ == '__main__':
                 previsao()
 
             elif op == 2:
-                city = input(translations[language]['enter_city'])
-                placeholders.clima(city)
+                tempo()
+                
             elif op == 3:
                 city = input(translations[language]['enter_city'])
                 placeholders.dados(city)

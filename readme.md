@@ -2,9 +2,10 @@ Funcionalidades Principais:
 
 1 - Previsão do tempo para a cidade selecionada ✅
 
-2 - Dados históricos sobre o clima de um local
+2 - Dados do tempo de um local ✅
+(ainda é necessário digitar o nome da cidade, a vou usar a localização do usuário)
 
-3 - Dados do clima de um local
+3 - Dados históricos sobre o clima de um local
 
 4 - Dados do seu local atual
 
