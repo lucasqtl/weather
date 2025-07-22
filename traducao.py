@@ -3,8 +3,8 @@ translations = {
     'pt': {
         'select_feature': 'Selecione uma funcionalidade:',
         'weather_forecast': '1 - Previsão do Tempo:',
-        'historical_data': '2 - Dados Históricos:',
-        'current_weather_data': '3 - Dados do clima atual:',
+        'current_weather_data': '2 - Dados do clima atual:',
+        'historical_data': '3 - Dados Históricos:',
         'region_map': '4 - Mapa da Região:',
         'customizable_widgets': '5 - Widgets Personalizáveis:',
         'report_local_weather': '6 - Reportar Clima Local:',
@@ -25,8 +25,8 @@ translations = {
     'en': {
         'select_feature': 'Select a feature:',
         'weather_forecast': '1 - Weather Forecast:',
-        'historical_data': '2 - Historical Data:',
-        'current_weather_data': '3 - Current Weather Data:',
+        'current_weather_data': '2 - Current Weather Data:',
+        'historical_data': '3 - Historical Data:',
         'region_map': '4 - Region Map:',
         'customizable_widgets': '5 - Customizable Widgets:',
         'report_local_weather': '6 - Report Local Weather:',
@@ -47,8 +47,8 @@ translations = {
     'es': {
         'select_feature': 'Seleccione una funcionalidad:',
         'weather_forecast': '1 - Pronóstico del Tiempo:',
-        'historical_data': '2 - Datos Históricos:',
-        'current_weather_data': '3 - Datos del clima actual:',
+        'current_weather_data': '2 - Datos del clima actual:',
+        'historical_data': '3 - Datos Históricos:',
         'region_map': '4 - Mapa de la Región:',
         'customizable_widgets': '5 - Widgets Personalizables:',
         'report_local_weather': '6 - Reportar Clima Local:',
